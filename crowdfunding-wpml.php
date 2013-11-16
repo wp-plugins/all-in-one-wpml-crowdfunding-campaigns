@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: All-in-one WPML Crowdfunding Campaigns
-Plugin URI: http://164a.com
+Plugin URI: https://github.com/Studio164a/crowdfunding-wpml
 Description: Unite all your WPML translations of a single crowdfunding campaign, so that the statistics for each are counted towards the whole.
-Version: 1.0
+Version: 1.0.1
 Author: Eric Daams
 Author URI: http://164a.com
 
@@ -23,21 +23,29 @@ along with All-in-one WPML Crowdfunding Campaigns. If not, see <http://www.gnu.o
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-// Make sure that Easy Digital Downloads, Appthemer Crowdfunding and WPML are all activated
-if ( class_exists('Easy_Digital_Downloads') 
-	&& class_exists('ATCF_CrowdFunding')
-	&& defined('ICL_SITEPRESS_VERSION') ) {
+/**
+ * Check that Easy Digital Downloads, Appthemer Crowdfunding and WPML are all installed. 
+ * @return void
+ */
+function sofa_crowdfunding_init() {
+	// Make sure that Easy Digital Downloads, Appthemer Crowdfunding and WPML are all activated
+	if ( class_exists('Easy_Digital_Downloads') 
+		&& class_exists('ATCF_CrowdFunding')
+		&& defined('ICL_SITEPRESS_VERSION') ) {
 
-	include_once('crowdfunding-wpml.class.php');	
+		include_once('crowdfunding-wpml.class.php');	
 
-	/**
-	 * Returns the one and only instance of this plugin
-	 * @return Sofa_Crowdfunding_WPML
-	 */
-	function get_sofa_crowdfunding_wpml() {
-		return Sofa_Crowdfunding_WPML::get_instance();
+		// Start 'er up
+		get_sofa_crowdfunding_wpml();
 	}
+}
 
-	// Start 'er up
-	get_sofa_crowdfunding_wpml();
+add_action('plugins_loaded', 'sofa_crowdfunding_init');
+
+/**
+ * Returns the one and only instance of this plugin
+ * @return Sofa_Crowdfunding_WPML
+ */
+function get_sofa_crowdfunding_wpml() {
+	return Sofa_Crowdfunding_WPML::get_instance();
 }
