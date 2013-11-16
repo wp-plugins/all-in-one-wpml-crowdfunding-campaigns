@@ -40,3 +40,13 @@ While this theme should work with any theme created with Appthemer Crowdfunding,
 **Can people create multilingual campaigns via the frontend submission form with this plugin?**
 
 No, not currently. At this stage, the only way for people to create multi-lingual campaigns is via the Wordpress dashboard. If there is sufficient demand for this, we may look at creating a PRO version of this plugin that adds this ability.
+
+== Changelog ==
+
+= 1.0.1 — 17 November, 2013 = 
+
+* Fixes a bug that caused the plugin to not properly instantiate itself.
+
+= 1.0.0 - 16 November, 2013 = 
+
+* Initial release
