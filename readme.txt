@@ -6,7 +6,7 @@ Plugin URI: https://github.com/Studio164a/crowdfunding-wpml
 Tags: wpml, multilingual, language, crowdfunding, crowd fund, appthemer, crowd funding, crowdfund
 Requires at least: 3.6
 Tested up to: 3.7
-Stable Tag: 1.0.1
+Stable Tag: 1.0.2
 License: GPLv2 or later
 
 Unify WPML translation versions of a crowdfunding campaign so that contributions to each language version count towards the main campaign.
@@ -43,10 +43,14 @@ No, not currently. At this stage, the only way for people to create multi-lingua
 
 == Changelog ==
 
+= 1.0.2 - 19 November, 2013 = 
+
+* Resolved a bug that caused the plugin to not work correctly with non-duplicate translations of a campaign.
+
 = 1.0.1 — 17 November, 2013 = 
 
 * Fixes a bug that caused the plugin to not properly instantiate itself.
 
 = 1.0.0 - 16 November, 2013 = 
 
-* Initial release 
+* Initial release
