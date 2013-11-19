@@ -61,14 +61,16 @@ class Sofa_Crowdfunding_WPML {
 	 * @since alpha-0.1
 	 */
 	private function get_all_campaign_ids( $campaign_id ) {
+		global $sitepress;
 
-		$parent_campaign = get_post_meta($campaign_id, '_icl_lang_duplicate_of', true);
+		$trid = $sitepress->get_element_trid($campaign_id, 'post_download');
+		$ids = array();
 
-		if ( !strlen( $parent_campaign ) ) {
-			$parent_campaign = $campaign_id;
-		}
+		foreach ($sitepress->get_element_translations($trid, 'post_download') as $translation) {
+			$ids[] = $translation->element_id;
+		}			
 
-		return $this->get_merged_campaign_ids( $parent_campaign );	
+		return $ids;
 	}
 
 	/**
@@ -78,6 +80,7 @@ class Sofa_Crowdfunding_WPML {
 	 * @param int $parent_id
 	 * @return array
 	 * @since alpha-0.1
+	 * @deprecated
 	 */
 	private function get_merged_campaign_ids( $parent_id ) {
 		global $wpdb;

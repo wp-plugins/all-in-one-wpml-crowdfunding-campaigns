@@ -3,7 +3,7 @@
 Plugin Name: All-in-one WPML Crowdfunding Campaigns
 Plugin URI: https://github.com/Studio164a/crowdfunding-wpml
 Description: Unite all your WPML translations of a single crowdfunding campaign, so that the statistics for each are counted towards the whole.
-Version: 1.0.1
+Version: 1.0.2
 Author: Eric Daams
 Author URI: http://164a.com
 
