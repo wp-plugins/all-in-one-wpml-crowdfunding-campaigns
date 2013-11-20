@@ -53,4 +53,4 @@ No, not currently. At this stage, the only way for people to create multi-lingua
 
 = 1.0.0 - 16 November, 2013 = 
 
-* Initial release
+* Initial release 
