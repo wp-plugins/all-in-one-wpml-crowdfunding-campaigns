@@ -1,12 +1,12 @@
 === All-in-one WPML Crowdfunding Campaigns ===
 Contributors: ericdaams
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40164a%2ecom
-Author URI: http://164a.com
+Author URI: https://164a.com
 Plugin URI: https://github.com/Studio164a/crowdfunding-wpml
 Tags: wpml, multilingual, language, crowdfunding, crowd fund, appthemer, crowd funding, crowdfund
-Requires at least: 3.6
-Tested up to: 3.7
-Stable Tag: 1.0.2
+Requires at least: 4.2
+Tested up to: 4.2.2
+Stable Tag: 1.1.0
 License: GPLv2 or later
 
 Unify WPML translation versions of a crowdfunding campaign so that contributions to each language version count towards the main campaign.
@@ -22,7 +22,7 @@ This plugin requires zero configuration. Just install it and you're done.
 * Appthemer Crowdfunding 1.7+
 * WPML 2.9+
 * Easy Digital Downloads 1.8+
-* Wordpress 3.7+ (will probably work with earlier versions, but support will not be provided for older installations)
+* Wordpress 4.2+ (will probably work with earlier versions, but support will not be provided for older installations)
 
 **Compatible Themes**
 
@@ -39,9 +39,13 @@ While this theme should work with any theme created with Appthemer Crowdfunding,
 
 **Can people create multilingual campaigns via the frontend submission form with this plugin?**
 
-No, not currently. At this stage, the only way for people to create multi-lingual campaigns is via the Wordpress dashboard. If there is sufficient demand for this, we may look at creating a PRO version of this plugin that adds this ability.
+No, not currently. At this stage, the only way for people to create multi-lingual campaigns is via the WordPress dashboard.
 
 == Changelog ==
+
+= 1.1.0 - 23 June, 2015 =
+
+* Updated for compatibility with the latest version of Appthemer Crowdfunding.
 
 = 1.0.2 - 19 November, 2013 = 
 

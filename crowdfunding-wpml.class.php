@@ -11,8 +11,7 @@ class Sofa_Crowdfunding_WPML {
 	 * Private constructor. Singleton pattern.
 	 */
 	private function __construct() {
-		add_filter( 'atcf_shortcode_submit_fields', array(&$this, 'atcf_shortcode_submit_fields') );
-		add_filter( 'atcf_campaign_backers_args', array(&$this, 'atcf_campaign_backers_args') );
+		add_filter( 'atcf_campaign_pledged_amount_id', array( $this, 'atcf_campaign_pledged_amount_id' ) );
 	}
 
 	/**
@@ -28,29 +27,17 @@ class Sofa_Crowdfunding_WPML {
 	}
 
 	/**
-	 * Filter the submit page fields
-	 * 
-	 * @uses atcf_shortcode_submit_fields
-	 * @param array $fields
-	 * @return array
-	 * @since alpha-0.1
-	 */
-	public function atcf_shortcode_submit_fields( $fields ) {
-		return $fields;
-	}
-
-	/**
 	 * Filter the arguments passed to the campaign backers query.
 	 * 
-	 * @uses atcf_campaign_backers_args
+	 * @uses atcf_campaign_pledged_amount_id
 	 * @param array $args
 	 * @return array
 	 * @since alpha-0.1
 	 */
-	public function atcf_campaign_backers_args( $args ) {		
-		$args['post_parent__in'] = $this->get_all_campaign_ids( $args['post_parent'] );
-		unset( $args['post_parent'] );
-		return $args;
+	public function atcf_campaign_pledged_amount_id( $ids ) {		
+		$campaign_id = current( $ids );
+		$ids = array_merge( $ids, $this->get_all_campaign_ids( $campaign_id ) );
+		return $ids;
 	}
 
 	/**
