@@ -43,6 +43,10 @@ No, not currently. At this stage, the only way for people to create multi-lingua
 
 == Changelog ==
 
+= 1.1.1 - 2 July, 2015 =
+
+* Fix bug that causes campaign in view to be counted twice in multi-language campaign calculation.
+
 = 1.1.0 - 23 June, 2015 =
 
 * Updated for compatibility with the latest version of Appthemer Crowdfunding.
